@@ -19,7 +19,7 @@ jobs:
     name: Build app and UI test targets
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: ./scripts/ci-select-xcode.sh 13.4.1
       - name: Install SentryCli
         run: brew install getsentry/tools/sentry-cli
@@ -62,7 +62,7 @@ jobs:
       matrix:
         iOS: [15.5, 15.4, 14.8, 14.7, 13.7]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: data-generator-build-products
