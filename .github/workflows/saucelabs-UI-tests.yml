@@ -40,7 +40,7 @@ jobs:
           MATCH_USERNAME: ${{ secrets.MATCH_USERNAME }}
       
       - name: Archiving DerivedData
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DerivedData-Xcode-${{matrix.xcode}}
           path: |
