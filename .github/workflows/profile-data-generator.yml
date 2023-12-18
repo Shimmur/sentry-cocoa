@@ -46,7 +46,7 @@ jobs:
           sentry-cli --auth-token ${{ secrets.SENTRY_AUTH_TOKEN }} upload-dif --org sentry-sdks --project trending-movies DerivedData/Build/Products/Debug-iphoneos/ProfileDataGeneratorUITest-Runner.app/PlugIns/ProfileDataGeneratorUITest.xctest.dSYM
           sentry-cli --auth-token ${{ secrets.SENTRY_AUTH_TOKEN }} upload-dif --org sentry-sdks --project trending-movies DerivedData/Build/Products/Debug-iphoneos/TrendingMovies.app.dSYM
       - name: Archiving DerivedData
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: data-generator-build-products
           path: |
