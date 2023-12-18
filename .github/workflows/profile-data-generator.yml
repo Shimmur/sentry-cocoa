@@ -63,7 +63,7 @@ jobs:
         iOS: [15.5, 15.4, 14.8, 14.7, 13.7]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: data-generator-build-products
       - run: npm install -g saucectl@0.99.4
