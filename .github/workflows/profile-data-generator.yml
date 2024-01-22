@@ -25,7 +25,7 @@ jobs:
         run: brew install getsentry/tools/sentry-cli
       - name: Cache Carthage dependencies
         id: trendingmovies-carthage-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ./Samples/TrendingMovies/Carthage/Build
           key: trendingmovies-carthage-cache-key-${{ hashFiles('Samples/TrendingMovies/Cartfile.resolved') }}
