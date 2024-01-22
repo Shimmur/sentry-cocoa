@@ -101,7 +101,7 @@ jobs:
       - name: Download and Apply Patch
         run: ./apply-patch.sh "${{ github.event.pull_request.head.sha }}" "${{ github.sha }}" add-sentry-to-homekit
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: "Cache: Pods"
         id: cache_pods
         with:
@@ -113,7 +113,7 @@ jobs:
             ${{ runner.os }}-pods-xcode-13.2
             ${{ hashFiles('**/Gemfile.lock', '**/Podfile.lock', 'Tools/BuildMaterialDesignIconsFont.sh') }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: "Cache: Gems"
         id: cache_gems
         with:
@@ -160,7 +160,7 @@ jobs:
       - name: Download and Apply Patch
         run: ./apply-patch.sh "${{ github.event.pull_request.head.sha }}" "${{ github.sha }}" add-sentry-to-vlc
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: "Cache: Pods"
         with:
           path: Pods
